@@ -1,5 +1,6 @@
-package leetcode.code;
+package leetcode;
 
+import leetcode.LeetCode0136SingleNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,6 +12,7 @@ class LeetCode0136SingleNumberTest {
 
     @Test
     void searchInsert() {
-
+        assertEquals(3, singleNumber.searchInsert(new int[]{2,2,3}));
+        assertEquals(4, singleNumber.searchInsert(new int[]{4,1,2,1,2}));
     }
 }

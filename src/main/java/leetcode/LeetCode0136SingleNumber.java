@@ -1,0 +1,18 @@
+package leetcode;
+
+import java.util.*;
+
+public class LeetCode0136SingleNumber {
+    public int searchInsert(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            Integer curr = nums[i];
+            if(set.contains(curr)) {
+                set.remove(curr);
+            } else {
+                set.add(curr);
+            }
+        }
+        return set.iterator().next();
+    }
+}
