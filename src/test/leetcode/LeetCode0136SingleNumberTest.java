@@ -1,6 +1,5 @@
 package leetcode;
 
-import leetcode.LeetCode0136SingleNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
