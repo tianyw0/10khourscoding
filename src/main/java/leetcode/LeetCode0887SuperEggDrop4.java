@@ -55,7 +55,7 @@ public class LeetCode0887SuperEggDrop4 {
                     int brokenTimes = dict[egg-1][mid-1];
                     int times = 1 + Math.max(fineTimes, brokenTimes);
                     minTimes = Math.min(minTimes, times);
-                    if(fineTimes > brokenTimes) {
+                    if(fineTimes >= brokenTimes) {
                         // max评比中fineTimes胜出，向上走
                         lo = mid + 1;
                     } else {
@@ -67,6 +67,7 @@ public class LeetCode0887SuperEggDrop4 {
                 // printdict(dict, eggs, floors);
             }
         }
+//        printdict(dict, eggs, floors);
         return dict[eggs][floors];
     }
 
