@@ -1,6 +1,7 @@
 package leetcode;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LeetCode0136SingleNumber {
     public int searchInsert(int[] nums) {
