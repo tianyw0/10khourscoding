@@ -15,11 +15,11 @@ public class LeetCode0240Searcha2DMatrixII {
             if(matrix[xloc][yloc] == target) {
                 return true;
             } else if(matrix[xloc][yloc] > target) {
-                // 开始找matrix[xloc-1][yloc]
-                xloc--;
-            } else if(matrix[xloc][yloc] < target) {
                 // 开始找matrix[xloc][yloc+1]
                 yloc++;
+            } else if(matrix[xloc][yloc] < target) {
+                // 开始找matrix[xloc-1][yloc]
+                xloc--;
             }
         }
         return false;
