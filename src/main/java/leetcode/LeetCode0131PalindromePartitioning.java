@@ -5,23 +5,44 @@ import java.util.List;
 
 public class LeetCode0131PalindromePartitioning {
 
-    List<List<Integer>> res = new LinkedList<>();
+    List<List<String>> res = new LinkedList<List<String>>();
     public List<List<String>> partition(String s) {
-        // 找到所有的切割方案，然后排除不满足条件的方案
-        // 一共有2^(s.length-1)中切割情况
-
-        // 先想办法输出这些情况，再想办法删除不合适的情况
-        // abc 情况下，按照一下顺序打印
-        // 一个字母开头，a,b,c/a,bc[11,10]
-        // 两个字母开头，ab,c[01]
-        // 三个字母开头，abc[00]
-        // todo 131
-        backTrace(s, new LinkedList<Character>());
+        backTrace(s, 0, new LinkedList<String>());
+        res.forEach(l -> {
+            System.out.println(l);
+        });
         return res;
     }
 
-    private void backTrace(String s, LinkedList<Character> characters) {
+    // i 就是第一刀的位置
+    private void backTrace(String s, int i, LinkedList<String> trace) {
+        if(i >= s.length()) {
+            res.add(new LinkedList<>(trace));
+            return;
+        }
 
+        // 第一刀的位置有 s.length 种可能，遍历第一刀的位置
+        // j 就是步长，步长在逐渐增加
+        for (int j = 0; j < s.length() - i; j++) {
+            String target = s.substring(i, i+j+1);
+            if(!judge(target)) {
+                continue;
+            }
+            trace.add(target);
+            backTrace(s, i+j+1, trace);
+            trace.removeLast();
+        }
+    }
 
+    public boolean judge(String target) {
+        if(target.length() == 0) return false;
+        int lo = 0, hi = target.length()-1;
+        while (lo <= hi) {
+            if(target.charAt(lo) != target.charAt(hi)) {
+                return false;
+            }
+            lo++;hi--;
+        }
+        return true;
     }
 }

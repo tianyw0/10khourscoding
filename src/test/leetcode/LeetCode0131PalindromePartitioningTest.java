@@ -16,15 +16,20 @@ class LeetCode0131PalindromePartitioningTest {
     void partition() {
         ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>() {{
             add(new ArrayList<String>() {{
-                add("aa");
+                add("a");
+                add("a");
                 add("b");
             }});
             add(new ArrayList<String>() {{
-                add("a");
-                add("a");
+                add("aa");
                 add("b");
             }});
         }};
-        assertIterableEquals(lists, palindromePartitioning.partition("aab"));
+        assertIterableEquals(lists, palindromePartitioning.partition("aabdd"));
+    }
+
+    @Test
+    void judge() {
+        assertEquals(true, palindromePartitioning.judge("abba"));
     }
 }
