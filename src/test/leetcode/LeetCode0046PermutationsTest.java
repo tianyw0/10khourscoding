@@ -1,0 +1,15 @@
+package leetcode;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class LeetCode0046PermutationsTest {
+
+    LeetCode0046Permutations permutations = new LeetCode0046Permutations();
+
+    @Test
+    void permute() {
+        permutations.permute(new int[]{1,2,3,4});
+    }
+}
