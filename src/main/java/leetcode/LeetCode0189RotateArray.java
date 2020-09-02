@@ -1,9 +1,7 @@
 package leetcode;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 public class LeetCode0189RotateArray {
     public void rotate(int[] nums, int k) {
