@@ -6,7 +6,8 @@ public class LeetCode0139WordBreak1 {
     List<LinkedList<String>> res = new ArrayList<LinkedList<String>>();
     Set<String> wordSet = new HashSet<>();
 
-    // todo
+    // 刚学会回溯，但使用回溯的话是超时的，见测试6。
+    // 其实，不要返回结果的情况是不用使用回溯的，复杂度高。
     public boolean wordBreak(String s, List<String> wordDict) {
         if(wordDict.size() == 0) return false;
 
