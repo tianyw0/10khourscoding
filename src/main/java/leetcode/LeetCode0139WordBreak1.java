@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.*;
 
-public class LeetCode0139WordBreak {
+public class LeetCode0139WordBreak1 {
     List<LinkedList<String>> res = new ArrayList<LinkedList<String>>();
     Set<String> wordSet = new HashSet<>();
 
@@ -17,18 +17,13 @@ public class LeetCode0139WordBreak {
 
         backTrace(s, 0, new LinkedList<String>());
 
-        HashSet<String> resSet = new HashSet<>();
-        res.forEach(l -> {
-            l.forEach(str -> {
-                resSet.add(str);
-            });
-        });
-
-        if(wordSet.containsAll(resSet)) {
-            return true;
-        } else {
-            return false;
+        if(res.size() == 0) return false;
+        for (LinkedList<String> resList : res) {
+            if (!wordDict.containsAll(resList)) {
+                return false;
+            }
         }
+        return true;
     }
 
     private void backTrace(String s, int i, LinkedList<String> trace) {
