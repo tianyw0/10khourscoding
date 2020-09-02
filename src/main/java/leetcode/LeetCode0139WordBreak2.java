@@ -6,7 +6,7 @@ public class LeetCode0139WordBreak2 {
     List<LinkedList<String>> res = new ArrayList<LinkedList<String>>();
     Set<String> wordSet = new HashSet<>();
 
-    // todo
+    // todo 需要改进，现在的方法超时
     public boolean wordBreak(String s, List<String> wordDict) {
         if(wordDict.size() == 0) return false;
 
