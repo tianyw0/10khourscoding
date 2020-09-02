@@ -15,7 +15,7 @@ class LeetCode0334IncreasingTripletSubsequenceTest {
     }
     @Test
     void increasingTriplet2() {
-        assertEquals(false, increasingTripletSubsequence.increasingTriplet(new int[]{1,4,3,4}));
+        assertEquals(true, increasingTripletSubsequence.increasingTriplet(new int[]{1,4,3,4}));
     }
     @Test
     void increasingTriplet3() {
