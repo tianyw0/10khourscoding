@@ -14,11 +14,11 @@ public class LeetCode0145BinaryTreePostorderTraversal {
 
     private void post(TreeNode root, LinkedList<Integer> ans) {
         if(root == null) return;
-        if(root.right != null) {
-            post(root.left, ans);
-        }
         if(root.left != null) {
             post(root.left, ans);
+        }
+        if(root.right != null) {
+            post(root.right, ans);
         }
         ans.add(root.val);
     }

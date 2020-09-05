@@ -15,12 +15,10 @@ class LeetCode0094BinaryTreeInorderTraversalTest {
 
     @Test
     void preorderTraversal() {
-        TreeNode treeNode = new TreeNode(1);
-        TreeNode node = new TreeNode(2);
-        node.left = new TreeNode(3);
-        treeNode.right = node;
+        TreeNode rootNode = new TreeNode(1, null,
+                new TreeNode(2, new TreeNode(3), null));
 
-        List<Integer> list = binaryTreeInorderTraversal.inorderTraversal(treeNode);
+        List<Integer> list = binaryTreeInorderTraversal.inorderTraversal(rootNode);
         assertIterableEquals(new LinkedList<Integer>(){{
             add(1);
             add(3);
@@ -30,17 +28,14 @@ class LeetCode0094BinaryTreeInorderTraversalTest {
 
     @Test
     void preorderTraversal2() {
-        TreeNode treeNode = new TreeNode(1);
-        TreeNode node = new TreeNode(5);
-        node.left = new TreeNode(3);
-        node.right = new TreeNode(6);
-        treeNode.right = node;
+        TreeNode rootNode = new TreeNode(1, null,
+                new TreeNode(3, new TreeNode(5), new TreeNode(6)));
 
-        List<Integer> list = binaryTreeInorderTraversal.inorderTraversal(treeNode);
+        List<Integer> list = binaryTreeInorderTraversal.inorderTraversal(rootNode);
         assertIterableEquals(new LinkedList<Integer>(){{
             add(1);
-            add(3);
             add(5);
+            add(3);
             add(6);
         }}, list);
     }
