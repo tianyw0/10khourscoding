@@ -8,9 +8,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LeetCode0094BinaryTreeInorderTraversalTest {
-    LeetCode0094BinaryTreeInorderTraversal binaryTreeInorderTraversal
-            = new LeetCode0094BinaryTreeInorderTraversal();
+class LeetCode0094BinaryTreeInorderTraversal1Test {
+    LeetCode0094BinaryTreeInorderTraversal1 binaryTreeInorderTraversal
+            = new LeetCode0094BinaryTreeInorderTraversal1();
 
 
     @Test

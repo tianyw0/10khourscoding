@@ -5,7 +5,7 @@ import leetcode.common.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LeetCode0094BinaryTreeInorderTraversal {
+public class LeetCode0094BinaryTreeInorderTraversal1 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ans = new LinkedList<>();
         inorder(root, ans);

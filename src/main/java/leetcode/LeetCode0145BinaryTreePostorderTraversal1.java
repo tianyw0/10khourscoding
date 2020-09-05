@@ -5,7 +5,7 @@ import leetcode.common.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LeetCode0145BinaryTreePostorderTraversal {
+public class LeetCode0145BinaryTreePostorderTraversal1 {
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> ans = new LinkedList<>();
         postorder(root, ans);
