@@ -8,17 +8,17 @@ import java.util.List;
 public class LeetCode0145BinaryTreePostorderTraversal {
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> ans = new LinkedList<>();
-        post(root, ans);
+        postorder(root, ans);
         return ans;
     }
 
-    private void post(TreeNode root, LinkedList<Integer> ans) {
+    private void postorder(TreeNode root, LinkedList<Integer> ans) {
         if(root == null) return;
         if(root.left != null) {
-            post(root.left, ans);
+            postorder(root.left, ans);
         }
         if(root.right != null) {
-            post(root.right, ans);
+            postorder(root.right, ans);
         }
         ans.add(root.val);
     }

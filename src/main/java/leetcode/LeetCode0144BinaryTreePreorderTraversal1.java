@@ -10,17 +10,17 @@ public class LeetCode0144BinaryTreePreorderTraversal1 {
   List<Integer> stack = new LinkedList<>();
 
   public List<Integer> preorderTraversal(TreeNode root) {
-    printTreeNode_digui(root);
+    preorder(root);
     return stack;
   }
 
-  private void printTreeNode_digui(TreeNode root) {
+  private void preorder(TreeNode root) {
     if(root != null) {
       stack.add(root.val);
       if(root.left != null)
-        printTreeNode_digui(root.left);
+        preorder(root.left);
       if(root.right != null)
-        printTreeNode_digui(root.right);
+        preorder(root.right);
     }
   }
 
