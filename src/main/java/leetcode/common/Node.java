@@ -1,5 +1,8 @@
 package leetcode.common;
 
+import lombok.ToString;
+
+@ToString
 public class Node {
     public int val;
     public Node left;
