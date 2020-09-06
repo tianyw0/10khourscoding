@@ -39,7 +39,7 @@ public class LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal {
     private void build(TreeNode rootNode, int root, Map<Integer, Integer> map, int lo, int hi) {
         // 构建左子树
         // 构建右子树
-        build(lo, map.get(root))
+//        build(lo, map.get(root))
 
     }
 }
