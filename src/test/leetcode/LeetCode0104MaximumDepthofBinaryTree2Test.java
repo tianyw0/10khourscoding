@@ -3,12 +3,12 @@ package leetcode;
 import leetcode.common.TreeNode;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class LeetCode0104MaximumDepthofBinaryTreeTest {
+class LeetCode0104MaximumDepthofBinaryTree2Test {
 
-    LeetCode0104MaximumDepthofBinaryTree maximumDepthofBinaryTree
-            = new LeetCode0104MaximumDepthofBinaryTree();
+    LeetCode0104MaximumDepthofBinaryTree2 maximumDepthofBinaryTree
+            = new LeetCode0104MaximumDepthofBinaryTree2();
 
     @Test
     void maxDepth() {
