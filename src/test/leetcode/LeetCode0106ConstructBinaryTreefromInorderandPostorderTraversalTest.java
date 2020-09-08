@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal1Test {
+class LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversalTest {
 
-    LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal1 l106
-            = new LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal1();
+    LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal l106
+            = new LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal();
 
     @Test
     void buildTree() {

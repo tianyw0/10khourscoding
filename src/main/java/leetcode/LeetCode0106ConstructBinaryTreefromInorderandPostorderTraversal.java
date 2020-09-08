@@ -5,7 +5,7 @@ import leetcode.common.TreeNode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal1 {
+public class LeetCode0106ConstructBinaryTreefromInorderandPostorderTraversal {
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         if(inorder == null || inorder.length == 0) {
