@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class LeetCode0238ProductofArrayExceptSelf {
   public int[] productExceptSelf(int[] nums) {
     // 思路：一个位置上的的乘积 = 这个位置上左边数的乘积 * 这个位置右边数的乘积；

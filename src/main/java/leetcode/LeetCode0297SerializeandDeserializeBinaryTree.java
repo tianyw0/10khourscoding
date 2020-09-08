@@ -4,7 +4,6 @@ import leetcode.common.TreeNode;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class LeetCode0297SerializeandDeserializeBinaryTree {
@@ -13,7 +12,7 @@ public class LeetCode0297SerializeandDeserializeBinaryTree {
         if(root == null) return "[]";
 
         StringBuilder sb = new StringBuilder("[");
-        StringBuilder nullsb = new StringBuilder("");
+        StringBuilder nullsb = new StringBuilder();
 
         // 按层遍历
         Queue<TreeNode> queue = new LinkedList<>();
