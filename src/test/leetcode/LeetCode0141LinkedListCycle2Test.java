@@ -17,7 +17,7 @@ class LeetCode0141LinkedListCycle2Test {
         n2.next = n3;
         n3.next = n4;
         n4.next = n2;
-        assertEquals(true, new LeetCode0141LinkedListCycle1().hasCycle(n1));
+        assertEquals(true, new LeetCode0141LinkedListCycle2().hasCycle(n1));
     }
 
     @Test
@@ -30,7 +30,7 @@ class LeetCode0141LinkedListCycle2Test {
         n2.next = n3;
         n3.next = n4;
         n4.next = null;
-        assertEquals(false, new LeetCode0141LinkedListCycle1().hasCycle(n1));
+        assertEquals(false, new LeetCode0141LinkedListCycle2().hasCycle(n1));
     }
 
     @Test
@@ -43,6 +43,6 @@ class LeetCode0141LinkedListCycle2Test {
         n2.next = n3;
         n3.next = n4;
         n4.next = n4;
-        assertEquals(true, new LeetCode0141LinkedListCycle1().hasCycle(n1));
+        assertEquals(true, new LeetCode0141LinkedListCycle2().hasCycle(n1));
     }
 }

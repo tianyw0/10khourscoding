@@ -9,14 +9,17 @@ public class LeetCode0141LinkedListCycle2 {
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
 
-        ListNode curr = head;
-        Set<ListNode> set = new HashSet<>();
-        while (curr.next != null) {
-            set.add(curr);
-            if(set.contains(curr.next)) {
-                return true;
-            }
-            curr = curr.next;
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (slow.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            // 防止空指针
+            if(fast.next == null) return false;
+
+            if(fast == slow) return true;
         }
         return false;
     }
