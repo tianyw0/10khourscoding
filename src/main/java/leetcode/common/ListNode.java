@@ -1,10 +1,11 @@
 package leetcode.common;
 
-import lombok.Data;
+import lombok.ToString;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-@Data
+@ToString
+// 单向链表节点
 public class ListNode {
   public int val;
   @ToString.Exclude

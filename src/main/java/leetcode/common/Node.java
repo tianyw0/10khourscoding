@@ -3,6 +3,7 @@ package leetcode.common;
 import lombok.ToString;
 
 @ToString
+// 三向链表节点
 public class Node {
     public int val;
     public Node left;
