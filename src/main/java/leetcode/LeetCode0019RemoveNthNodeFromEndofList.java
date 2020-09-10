@@ -7,20 +7,25 @@ public class LeetCode0019RemoveNthNodeFromEndofList {
         if (head == null) {
             return null;
         }
+        //使用哨兵节点
+        ListNode sentinel = new ListNode(-1);
+        sentinel.next = head;
 
-        ListNode fast = head;
-        ListNode slow = head;
-        for (int i = 0; i < n; i++) {
+        ListNode fast = sentinel;
+        ListNode slow = sentinel;
+
+        for (int i = 1; i <= n ; i++) {
+            // fast 指针先前进n次
             fast = fast.next;
         }
 
         while (fast.next != null) {
-            slow = slow.next;
             fast = fast.next;
+            slow = slow.next;
         }
 
+        slow.next = slow.next.next;
 
-
-        return head;
+        return sentinel.next;
     }
 }
