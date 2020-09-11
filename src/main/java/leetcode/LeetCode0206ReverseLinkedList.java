@@ -7,15 +7,16 @@ public class LeetCode0206ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         if(head == null) return null;
 
-        // todo 不对
-        ListNode p = head;
-        while(p.next != null) {
-            ListNode temp = p.next;
-            p.next = p.next.next;
+        // 哨兵机制
+        ListNode sentinel = new ListNode(-1);
+        sentinel.next = head;
 
-            temp.next.next = head;
-            head = temp;
+        ListNode p = sentinel;
+        while(p.next != null) {
+            // p.next 不等于空的时候，将p.next往前插
+
+
         }
-        return head;
+        return sentinel.next;
     }
 }
