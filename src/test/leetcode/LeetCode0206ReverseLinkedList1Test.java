@@ -3,16 +3,14 @@ package leetcode;
 import leetcode.common.ListNode;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class LeetCode0206ReverseLinkedListTest {
+class LeetCode0206ReverseLinkedList1Test {
 
     @Test
     void reverseList() {
 
-        assertEquals(null, new LeetCode0206ReverseLinkedList().reverseList(null));
+        assertEquals(null, new LeetCode0206ReverseLinkedList1().reverseList(null));
     }
 
     @Test
@@ -33,6 +31,6 @@ class LeetCode0206ReverseLinkedListTest {
         node2.next = node1;
 
 
-        assertEquals(node3.toString(), new LeetCode0206ReverseLinkedList().reverseList(n1).toString());
+        assertEquals(node3.toString(), new LeetCode0206ReverseLinkedList1().reverseList(n1).toString());
     }
 }
