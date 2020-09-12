@@ -1,28 +1,32 @@
 package leetcode;
 
 
+import lombok.Data;
 import lombok.ToString;
 
+@Data
 public class LeetCode0707DesignLinkedList2 {
     /** Initialize your data structure here. */
     int size;
     ListNode head;
+    ListNode tail;
 
     // 构造一个带哨兵节点的单向链表
     public LeetCode0707DesignLinkedList2() {
         head = new ListNode(0);
+        tail = new ListNode(0);
+        tail.prev = head;
+        head.next = tail;
         size = 0;
     }
 
     /** Add a node of value val before the first element of the linked list.
      * After the insertion, the new node will be the first node of the linked list. */
-    // 将元素插入头节点
     public void addAtHead(int val) {
         addAtIndex(0, val);
     }
 
     /** Append a node of value val to the last element of the linked list. */
-    // 将元素插入尾节点
     public void addAtTail(int val) {
         addAtIndex(size, val);
     }
@@ -31,7 +35,6 @@ public class LeetCode0707DesignLinkedList2 {
      * If index equals to the length of linked list,
      * the node will be appended to the end of linked list.
      * If index is greater than the length, the node will not be inserted. */
-    // 向第几个元素插值
     public void addAtIndex(int index, int val) {
         if(0 <= index && index <= size) {
             ListNode tempPrev = head;
@@ -39,12 +42,13 @@ public class LeetCode0707DesignLinkedList2 {
                 tempPrev = tempPrev.next;
             }
             ListNode toadd = new ListNode(val);
-            if(tempPrev.next == null) {
-                tempPrev.next = toadd;
-            } else {
-                toadd.next = tempPrev.next;
-                tempPrev.next = toadd;
-            }
+            ListNode tempNext = tempPrev.next;
+
+            toadd.prev = tempNext.prev;
+            toadd.next = tempPrev.next;
+
+            tempNext.prev = toadd;
+            tempPrev.next = toadd;
             size++;
         }
     }
@@ -57,7 +61,10 @@ public class LeetCode0707DesignLinkedList2 {
                 tempPrev = tempPrev.next;
             }
 
-            tempPrev.next = tempPrev.next.next;
+            ListNode toDel = tempPrev.next;
+            tempPrev.next = toDel.next;
+            tempPrev.next.prev = toDel.prev;
+
             size--;
         }
     }
@@ -76,14 +83,15 @@ public class LeetCode0707DesignLinkedList2 {
         }
     }
 
-    @ToString
-    // 单向链表节点
-    private class ListNode {
+    // 双向链表节点
+    @Data
+    static class ListNode {
         public int val;
-        //  @ToString.Exclude
-        //  @EqualsAndHashCode.Exclude
+        @ToString.Exclude
         public ListNode next;
-        public ListNode pre;
+        @ToString.Exclude
+        public ListNode prev;
         public ListNode(int x) { val = x; }
     }
+
 }

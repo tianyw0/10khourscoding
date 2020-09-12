@@ -144,12 +144,15 @@ class LeetCode0707DesignLinkedList1Test {
 
     @Test
     void deleteAtIndex2() {
-        ListNode node1 = new ListNode(0);
-        ListNode node2 = new ListNode(1);
-        node1.next = node2;
-
         LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.deleteAtIndex(0);
+        l707.deleteAtIndex(0);
+        assertEquals(null, l707.head.next);
+    }
+
+    @Test
+    void deleteAtIndex3() {
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.deleteAtIndex(0);
         assertEquals(null, l707.head.next);
     }
