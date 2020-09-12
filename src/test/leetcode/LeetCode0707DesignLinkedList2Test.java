@@ -3,20 +3,20 @@ package leetcode;
 import leetcode.common.ListNode;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class LeetCode0707DesignLinkedListTest {
+class LeetCode0707DesignLinkedList2Test {
 
     @Test
     void init() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         assertEquals(0, l707.size);
         assertEquals(new ListNode(0).toString(), l707.head.toString());
     }
 
     @Test
     void size() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         assertEquals(0, l707.size);
         l707.addAtHead(0);
         assertEquals(1, l707.size);
@@ -24,14 +24,14 @@ class LeetCode0707DesignLinkedListTest {
 
     @Test
     void get() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         assertEquals(-1, l707.get(0));
         assertEquals(-1, l707.get(1));
     }
 
     @Test
     void get2() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtHead(7);
         l707.addAtHead(2);
         assertEquals(2, l707.get(0));
@@ -43,7 +43,7 @@ class LeetCode0707DesignLinkedListTest {
     void addAtHead() {
         ListNode node1 = new ListNode(0);
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtHead(0);
         assertEquals(node1.toString(), l707.head.next.toString());
     }
@@ -54,7 +54,7 @@ class LeetCode0707DesignLinkedListTest {
         ListNode node2 = new ListNode(1);
         node1.next = node2;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtHead(1);
         l707.addAtHead(0);
         assertEquals(node1.toString(), l707.head.next.toString());
@@ -64,7 +64,7 @@ class LeetCode0707DesignLinkedListTest {
     void addAtTail() {
         ListNode node1 = new ListNode(0);
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtTail(0);
         assertEquals(node1.toString(), l707.head.next.toString());
     }
@@ -75,7 +75,7 @@ class LeetCode0707DesignLinkedListTest {
         ListNode node2 = new ListNode(1);
         node1.next = node2;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtTail(0);
         l707.addAtTail(1);
         assertEquals(node1.toString(), l707.head.next.toString());
@@ -90,7 +90,7 @@ class LeetCode0707DesignLinkedListTest {
         node1.next = node2;
         node2.next = node3;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtTail(0);
         l707.addAtTail(1);
         l707.addAtIndex(2, 2);
@@ -102,7 +102,7 @@ class LeetCode0707DesignLinkedListTest {
 
         ListNode node1 = new ListNode(0);
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtTail(0);
         assertEquals(node1.toString(), l707.head.next.toString());
     }
@@ -113,7 +113,7 @@ class LeetCode0707DesignLinkedListTest {
         ListNode node2 = new ListNode(1);
         node1.next = node2;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtIndex(0, 0);
         l707.addAtIndex(1, 1);
         assertEquals(node1.toString(), l707.head.next.toString());
@@ -121,7 +121,7 @@ class LeetCode0707DesignLinkedListTest {
 
     @Test
     void addAtIndex4() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtIndex(0, 0);
         l707.addAtIndex(1, 1);
         l707.addAtIndex(2, 2);
@@ -134,7 +134,7 @@ class LeetCode0707DesignLinkedListTest {
         ListNode node2 = new ListNode(2);
         node1.next = node2;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtTail(0);
         l707.addAtTail(1);
         l707.addAtTail(2);
@@ -148,7 +148,7 @@ class LeetCode0707DesignLinkedListTest {
         ListNode node2 = new ListNode(1);
         node1.next = node2;
 
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.deleteAtIndex(0);
         l707.deleteAtIndex(0);
         assertEquals(null, l707.head.next);
@@ -159,7 +159,7 @@ class LeetCode0707DesignLinkedListTest {
 
     @Test
     void test() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtHead(7);
         l707.addAtHead(2);
         l707.addAtHead(1);
@@ -178,7 +178,7 @@ class LeetCode0707DesignLinkedListTest {
 
     @Test
     void test2() {
-        LeetCode0707DesignLinkedList l707 = new LeetCode0707DesignLinkedList();
+        LeetCode0707DesignLinkedList1 l707 = new LeetCode0707DesignLinkedList1();
         l707.addAtHead(2);
         System.out.println(l707.head.next);
         System.out.println(l707.size);

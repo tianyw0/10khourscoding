@@ -2,13 +2,13 @@ package leetcode;
 
 import leetcode.common.ListNode;
 
-public class LeetCode0707DesignLinkedList {
+public class LeetCode0707DesignLinkedList1 {
     /** Initialize your data structure here. */
     int size;
     ListNode head;
 
     // 构造一个带哨兵节点的单向链表
-    public LeetCode0707DesignLinkedList() {
+    public LeetCode0707DesignLinkedList1() {
         head = new ListNode(0);
         size = 0;
     }
