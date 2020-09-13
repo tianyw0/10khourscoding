@@ -2,7 +2,7 @@ package leetcode;
 
 import leetcode.common.ListNode;
 
-public class LeetCode02AddTwoNumbers {
+public class LeetCode0002AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         if(l1 == null) return l2;
