@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LeetCode0234PalindromeLinkedListTest {
+class LeetCode0234PalindromeLinkedList1Test {
 
     @Test
     void isPalindrome() {
-
-        assertEquals(false, new LeetCode0234PalindromeLinkedList().isPalindrome(null));
+        assertEquals(false, new LeetCode0234PalindromeLinkedList1().isPalindrome(null));
     }
 
     @Test
@@ -18,7 +17,7 @@ class LeetCode0234PalindromeLinkedListTest {
         ListNode n1 = new ListNode(1);
         ListNode n2 = new ListNode(2);
         n1.next = n2;
-        assertEquals(false, new LeetCode0234PalindromeLinkedList().isPalindrome(n1));
+        assertEquals(false, new LeetCode0234PalindromeLinkedList1().isPalindrome(n1));
     }
 
     @Test
@@ -28,7 +27,7 @@ class LeetCode0234PalindromeLinkedListTest {
         ListNode n3 = new ListNode(1);
         n1.next = n2;
         n2.next = n3;
-        assertEquals(true, new LeetCode0234PalindromeLinkedList().isPalindrome(n1));
+        assertEquals(true, new LeetCode0234PalindromeLinkedList1().isPalindrome(n1));
     }
 
     @Test
@@ -40,6 +39,6 @@ class LeetCode0234PalindromeLinkedListTest {
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-        assertEquals(true, new LeetCode0234PalindromeLinkedList().isPalindrome(n1));
+        assertEquals(true, new LeetCode0234PalindromeLinkedList1().isPalindrome(n1));
     }
 }
