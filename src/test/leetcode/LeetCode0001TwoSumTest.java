@@ -8,6 +8,7 @@ class LeetCode0001TwoSumTest {
 
     @Test
     void solution() {
+
         int[] sums = { -3, 4, 3, 90 };
         int[] result = new LeetCode0001TwoSum().solution1(sums, 93);
         assertArrayEquals(new int[]{2, 3}, result);
