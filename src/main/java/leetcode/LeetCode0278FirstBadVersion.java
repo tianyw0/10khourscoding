@@ -8,8 +8,14 @@ public class LeetCode0278FirstBadVersion {
 
     while (lo <= hi) {
       int mid = lo + (hi - lo) / 2;
-      if(isBadVersion(mid)) {
-
+      if(!isBadVersion(mid) && isBadVersion(mid+1)) {
+        return mid+1;
+      }
+      else if(isBadVersion(mid)) {
+        hi = mid - 1;
+      }
+      else if(!isBadVersion(mid+1)) {
+        lo = mid + 1;
       }
     }
 
@@ -17,6 +23,6 @@ public class LeetCode0278FirstBadVersion {
   }
 
   private boolean isBadVersion(int mid) {
-    return false;
+    return mid > 7;
   }
 }
