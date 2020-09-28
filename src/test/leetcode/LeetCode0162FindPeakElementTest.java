@@ -13,6 +13,11 @@ class LeetCode0162FindPeakElementTest {
 
     @Test
     void findPeakElement2() {
-        assertEquals(1, new LeetCode0162FindPeakElement().findPeakElement(new int[]{1,2,1,3,5,6,4}));
+        assertEquals(5, new LeetCode0162FindPeakElement().findPeakElement(new int[]{1,2,1,3,5,6,4}));
+    }
+
+    @Test
+    void findPeakElement3() {
+        assertEquals(3, new LeetCode0162FindPeakElement().findPeakElement(new int[]{1,2,1,2,1}));
     }
 }
