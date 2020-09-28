@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 class LeetCode0094BinaryTreeInorderTraversal1Test {
     LeetCode0094BinaryTreeInorderTraversal1 binaryTreeInorderTraversal

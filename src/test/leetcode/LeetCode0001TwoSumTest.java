@@ -1,8 +1,8 @@
 package leetcode;
 
-import leetcode.LeetCode0001TwoSum;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class LeetCode0001TwoSumTest {
 

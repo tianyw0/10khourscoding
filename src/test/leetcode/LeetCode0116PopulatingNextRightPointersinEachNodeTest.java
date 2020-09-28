@@ -3,7 +3,7 @@ package leetcode;
 import leetcode.common.Node;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LeetCode0116PopulatingNextRightPointersinEachNodeTest {
 

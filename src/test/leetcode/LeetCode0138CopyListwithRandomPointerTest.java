@@ -1,9 +1,8 @@
 package leetcode;
 
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Node;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LeetCode0138CopyListwithRandomPointerTest {
 

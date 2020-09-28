@@ -2,9 +2,6 @@ package leetcode;
 
 import leetcode.common.ListNode;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class LeetCode0141LinkedListCycle2 {
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
