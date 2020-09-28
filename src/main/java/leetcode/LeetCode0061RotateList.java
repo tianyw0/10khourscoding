@@ -2,9 +2,6 @@ package leetcode;
 
 import leetcode.common.ListNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LeetCode0061RotateList {
     public ListNode rotateRight(ListNode head, int k) {
         if(head == null) return null;
