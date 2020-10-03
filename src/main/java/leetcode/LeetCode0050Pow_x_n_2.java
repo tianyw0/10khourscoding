@@ -21,11 +21,14 @@ public class LeetCode0050Pow_x_n_2 {
             int mod_2 = pop % 2;
 
             if(div_2 == 0) {
-                div_2 =
+                // todo
+//                div_2
             }
 
             stack.add(div_2);
             res *= (mod_2 == 0 ? 1 : x);
         }
+
+        return 0D;
     }
 }
