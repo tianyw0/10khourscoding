@@ -3,8 +3,6 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sun.tools.internal.xjc.reader.Ring.add;
-
 public class LeetCode0658FindKClosestElements {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         if(arr[0] >= x) {
