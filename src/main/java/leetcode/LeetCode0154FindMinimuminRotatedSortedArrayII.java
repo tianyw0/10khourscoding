@@ -10,7 +10,14 @@ public class LeetCode0154FindMinimuminRotatedSortedArrayII {
             if(midVal <= minVal) {
                 minVal = midVal;
                 // left ordered
-                if(nums[lo] <= nums[mid] && nums[mid] >= nums[hi]) {
+                // 1,3,3
+                // 3,3,1
+                // 3,3,3
+                // 01x
+                // 0: 00 01 0x 88812
+                // 1: 10 11 1x
+                // x: x0 x1
+                if(nums[lo] <= nums[mid] && nums[mid] > nums[hi]) {
                     lo = mid + 1;
                 } else {
                     hi = mid - 1;
