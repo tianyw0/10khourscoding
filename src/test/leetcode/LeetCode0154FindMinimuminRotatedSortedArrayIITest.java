@@ -29,5 +29,17 @@ class LeetCode0154FindMinimuminRotatedSortedArrayIITest {
                 .findMin(new int[]{1,3,3}));
     }
 
+    @Test
+    void findMin232222() {
+        assertEquals(1, new LeetCode0154FindMinimuminRotatedSortedArrayII()
+                .findMin(new int[]{3,3,3,3,1,3,3}));
+    }
+
+    @Test
+    void findMin23222222() {
+        assertEquals(1, new LeetCode0154FindMinimuminRotatedSortedArrayII()
+                .findMin(new int[]{5,5,5,5,5,5,5,5,5,5,1}));
+    }
+
 
 }

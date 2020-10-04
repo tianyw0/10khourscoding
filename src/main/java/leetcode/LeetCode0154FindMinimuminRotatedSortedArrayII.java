@@ -1,39 +1,20 @@
 package leetcode;
 
 public class LeetCode0154FindMinimuminRotatedSortedArrayII {
+    // https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/solution/tong-guo-hua-tu-lai-shen-ke-li-jie-er-fen-fa-by-ch/
     public int findMin(int[] nums) {
         int lo = 0, hi = nums.length - 1;
-        int minVal = Integer.MAX_VALUE;
         while (lo <= hi) {
             int mid = lo + ((hi - lo) >> 1);
             int midVal = nums[mid];
-            if(midVal <= minVal) {
-                minVal = midVal;
-                // left ordered
-                // 1,3,3
-                // 3,3,1
-                // 3,3,3
-                // 01x
-                // 0: 00 01 0x 88812
-                // 1: 10 11 1x
-                // x: x0 x1
-                if(nums[lo] <= nums[mid] && nums[mid] > nums[hi]) {
-                    lo = mid + 1;
-                } else {
-                    hi = mid - 1;
-                }
-            }
-
-            else if(midVal > minVal) {
-                // left ordered
-                if(nums[lo] <= nums[mid] && nums[mid] >= nums[hi]) {
-                    lo = mid + 1;
-                } else {
-                    hi = mid - 1;
-                }
+            if(midVal > nums[hi]) {
+                lo = mid + 1;
+            } else if(midVal < nums[hi]) {
+                hi = mid;
+            } else if(midVal == nums[hi]){
+                hi--;
             }
         }
-
-        return minVal;
+        return nums[lo];
     }
 }
