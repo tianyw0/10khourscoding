@@ -8,7 +8,7 @@ public class LeetCode0191Numberof1Bits {
             if((n & mask) == 1) {
                 res ++;
             }
-            res >>= 1;
+            n >>= 1;
         }
         return res;
     }
