@@ -15,8 +15,8 @@ class LeetCode0108ConvertSortedArraytoBinarySearchTreeTest {
     }
     @Test
     void sortedArrayToBST2() {
-        assertEquals(TreeNode.builder().val(1)
-                        .left(new TreeNode(2))
+        assertEquals(TreeNode.builder().val(2)
+                        .left(new TreeNode(1))
                         .right(new TreeNode(3))
                         .build()
                 , new LeetCode0108ConvertSortedArraytoBinarySearchTree().sortedArrayToBST(new int[]{1,2,3}));
@@ -25,9 +25,9 @@ class LeetCode0108ConvertSortedArraytoBinarySearchTreeTest {
     @Test
     void sortedArrayToBST3() {
         assertEquals(TreeNode.builder().val(1)
-                        .left(new TreeNode(2))
+                        .right(new TreeNode(2))
                         .build()
-                , new LeetCode0108ConvertSortedArraytoBinarySearchTree().sortedArrayToBST(new int[]{1,2,null,}));
+                , new LeetCode0108ConvertSortedArraytoBinarySearchTree().sortedArrayToBST(new int[]{1,2}));
     }
 
 }

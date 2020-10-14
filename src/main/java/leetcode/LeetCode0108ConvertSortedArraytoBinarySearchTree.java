@@ -2,30 +2,21 @@ package leetcode;
 
 import leetcode.common.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class LeetCode0108ConvertSortedArraytoBinarySearchTree {
     public TreeNode sortedArrayToBST(int[] nums) {
         if(nums == null || nums.length == 0)
             return null;
-        Queue<TreeNode> queue = new LinkedList<>();
 
-        TreeNode head = new TreeNode(nums[0]);
-        queue.add(head);
-        int i = 1;
-        while (i < nums.length) {
-            TreeNode poll = queue.poll();
-            poll.left = new TreeNode(nums[i]);
-            queue.add(poll.left);
-            i++;
+        return getTreeNode(nums, 0, nums.length-1);
+    }
 
-            if(i < nums.length) {
-                poll.right = new TreeNode(nums[i]);
-                queue.add(poll.right);
-                i++;
-            }
-        }
-        return head;
+    private TreeNode getTreeNode(int[] nums, int lo, int hi) {
+        if(lo > hi) return null;
+
+        int mid = lo + ((hi-lo) >> 1);
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = getTreeNode(nums, lo, mid-1);
+        root.right = getTreeNode(nums, mid+1, hi);
+        return root;
     }
 }
