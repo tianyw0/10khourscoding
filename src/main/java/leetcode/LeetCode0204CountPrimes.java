@@ -9,8 +9,8 @@ public class LeetCode0204CountPrimes {
         init(flags);
 
         int count = 0;
-        for (int i = 0; i < n; i++) {
-            if(judge(i, flags)) {
+        for (int i = 2; i < n; i++) {
+            if(flags[i]) {
                 count++;
                 influence(i, flags);
             }
@@ -20,13 +20,21 @@ public class LeetCode0204CountPrimes {
 
     private void init(boolean[] flags) {
         Arrays.fill(flags, true);
-        if(idx % 2 == 0) return false;
-        if(idx == 1) return false;
+        for (int i = 0; i < flags.length; i++) {
+            if(i % 2 == 0) flags[i] = false;
+        }
+        if(flags.length > 1)
+            flags[1] = false;
+        if(flags.length > 2)
+            flags[2] = true;
     }
 
     private void influence(int idx, boolean[] flags) {
-        for (int i = idx * 2; i < flags.length; i++) {
-            flags[i] = false;
+        if(idx % 2 != 0) {
+            // 只有奇数需要扩散
+            for (int i = idx * 2; i < flags.length; i+=idx) {
+                flags[i] = false;
+            }
         }
     }
 
