@@ -24,3 +24,7 @@ nbdist/
 .nb-gradle/
 
 out/
+
+### leetcode-editor
+all.json
+translation.json
