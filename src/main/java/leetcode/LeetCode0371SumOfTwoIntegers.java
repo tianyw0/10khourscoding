@@ -19,17 +19,19 @@ package leetcode;
 
 public class LeetCode0371SumOfTwoIntegers {
     public int getSum(int a, int b) {
-        if(a == 0) return b;
-        if(b == 0) return a;
-
-        int hi = (a & b) << 1;
-        int lo = a ^ b;
-
-        while (hi != 0) {
-            int carry = (hi & lo) << 1;
-
+        // 本质上是考察加法器的制作
+        int hi, lo;
+        while(true) {
+            lo = (a ^ b);
+            hi = (a & b);
+            if(hi == 0) {
+                return lo;
+            } else {
+                hi = hi << 1;
+                a = lo;
+                b = hi;
+            }
         }
-        return
     }
 }
 

@@ -20,4 +20,9 @@ class LeetCode0371SumOfTwoIntegersTest {
     void getSum3() {
         assertEquals(4, new LeetCode0371SumOfTwoIntegers().getSum(2,2));
     }
+
+    @Test
+    void getSum4() {
+        assertEquals(1, new LeetCode0371SumOfTwoIntegers().getSum(-2,3));
+    }
 }
