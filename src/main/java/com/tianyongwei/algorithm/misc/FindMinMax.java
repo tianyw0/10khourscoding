@@ -1,4 +1,4 @@
-package com.tianyongwei.algorithm.littleWork;
+package com.tianyongwei.algorithm.misc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
