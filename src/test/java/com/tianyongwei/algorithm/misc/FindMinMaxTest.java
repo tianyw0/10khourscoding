@@ -1,8 +1,8 @@
 package com.tianyongwei.algorithm.misc;
 
+import com.tianyongwei.algorithm.hashfilter.FindMinMax;
+import com.tianyongwei.algorithm.hashfilter.MinMax;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FindMinMaxTest {
 
