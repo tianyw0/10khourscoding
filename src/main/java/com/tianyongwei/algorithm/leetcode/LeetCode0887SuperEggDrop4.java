@@ -6,20 +6,22 @@ public class LeetCode0887SuperEggDrop4 {
     // todo 87
     // 填表
     int[][] dict;
+
     public int superEggDrop(int K, int N) {
-        dict = new int[K+1][N+1];
+        dict = new int[K + 1][N + 1];
         return dp(K, N);
     }
+
     // 自底向上 推导出字典(填表)，这里已经从递归中跳出来了
     private int dp(int eggs, int floors) {
         // 边界情况直接返回结果
-        if(eggs == 0 || floors == 0) {
+        if (eggs == 0 || floors == 0) {
             return 0;
         }
-        if(eggs == 1) {
+        if (eggs == 1) {
             return floors;
         }
-        if(floors == 1) {
+        if (floors == 1) {
             return 1;
         }
 
@@ -49,14 +51,14 @@ public class LeetCode0887SuperEggDrop4 {
                 int minTimes = Integer.MAX_VALUE;
 
                 int lo = 1, hi = floor;
-                while(lo < hi) {
+                while (lo < hi) {
                     int mid = lo + (hi - lo) / 2;
                     // 从中间开始扔鸡蛋
-                    int fineTimes = dict[egg][floor-mid];
-                    int brokenTimes = dict[egg-1][mid-1];
+                    int fineTimes = dict[egg][floor - mid];
+                    int brokenTimes = dict[egg - 1][mid - 1];
                     int times = 1 + Math.max(fineTimes, brokenTimes);
                     minTimes = Math.min(minTimes, times);
-                    if(fineTimes >= brokenTimes) {
+                    if (fineTimes >= brokenTimes) {
                         // max评比中fineTimes胜出，向上走
                         lo = mid + 1;
                     } else {
@@ -68,12 +70,12 @@ public class LeetCode0887SuperEggDrop4 {
                 // printdict(dict, eggs, floors);
             }
         }
-//        printdict(dict, eggs, floors);
+        // printdict(dict, eggs, floors);
         return dict[eggs][floors];
     }
 
     private void printdict(int[][] dict, int eggs, int floors) {
-        for (int i = 0; i <= eggs ; i++) {
+        for (int i = 0; i <= eggs; i++) {
             System.out.println(Arrays.toString(dict[i]));
         }
     }
