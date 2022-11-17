@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch LeetCode0003LengthOfLongestSubstring",
+      "request": "launch",
+      "mainClass": "com.tianyongwei.algorithm.leetcode.LeetCode0003LengthOfLongestSubstring",
+      "projectName": "algorithm"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}"

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class LeetCode0887SuperEggDrop4Test {
+class L0887SuperEggDrop4Test {
 
-    LeetCode0887SuperEggDrop4 superEggDrop
-            = new LeetCode0887SuperEggDrop4();
+    L0887SuperEggDrop4 superEggDrop
+            = new L0887SuperEggDrop4();
 
     @Test
     void testSuperEggDrop() {
