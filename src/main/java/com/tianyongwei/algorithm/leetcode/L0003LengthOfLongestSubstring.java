@@ -36,4 +36,8 @@ public class L0003LengthOfLongestSubstring {
     return set.size();
   }
 
+  // 滑动窗口
+  public int lengthOfLongestSubstring2() {
+    return 0;
+  }
 }
