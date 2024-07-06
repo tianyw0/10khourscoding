@@ -19,7 +19,7 @@ public class TreeMapTest {
         System.out.println("\n");
 
         // Create a comparator that compares Map entries by values
-        Comparator<Map.Entry<String, Integer>> valueComparator = Map.Entry.comparingByValue();
+        // Comparator<Map.Entry<String, Integer>> valueComparator = Map.Entry.comparingByValue();
 
         // Create a TreeMap to store the sorted entries
         TreeMap<String, Integer> sortedMap = new TreeMap<>(Comparator.comparingInt(unsortedMap::get));
@@ -41,28 +41,5 @@ public class TreeMapTest {
         }
         // 注意这里包含 F，但上面遍历的时候就是没有的
         System.out.println("sortedMap.containsKey(\"F\"): " + sortedMap.containsKey("F"));
-    }
-
-    public static void main2(String[] args) {
-        Scanner in = new Scanner(System.in);
-        Map<Character, Integer> unsortMap = new HashMap<>();
-
-        String s = in.nextLine();
-        s.chars().forEach(c -> {
-            if (unsortMap.containsKey((char)c)) {
-                unsortMap.put((char)c, unsortMap.get((char)c) + 1);
-            } else {
-                unsortMap.put((char)c, 1);
-            }
-        });
-
-        TreeMap<Character, Integer> map = new TreeMap<>(Comparator.comparingInt(unsortMap::get));
-        int min = map.firstEntry().getValue();
-        for (Map.Entry<Character, Integer> e : map.entrySet()) {
-            if (e.getValue() == min) {
-                s = s.replaceAll(e.getKey() + "", "");
-            }
-        }
-        System.out.println(s);
     }
 }
